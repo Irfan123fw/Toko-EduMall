@@ -106,7 +106,7 @@
               </div>
               <div class="product-detail-container p-2">
                 <div class="d-flex justify-content-between align-items-center">
-                  <h5 class="dress-name">Pulpen Air Glitter Lucu</h5>
+                  <h5 class="dress-name">Pensil carbon</h5>
                 </div>
                 <div
                   class="d-flex justify-content-between align-items-center pt-1"
@@ -189,23 +189,28 @@
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/agency.js"></script>
+<script>
+  function redirectToWhatsApp() {
+    // Ganti nomor penerima sesuai kebutuhan Anda
+    var nomorPenerima = "+6282172716552";
+    
+    // Mengambil teks dari elemen dengan kelas .dress-name
+    var produkNama = document.querySelector('.dress-name').textContent;
+    
+    // Menggunakan teks produkNama dalam pesan
+    var pesan = "Saya ingin memesan " + produkNama;
 
-    <script>
-      function redirectToWhatsApp() {
-        // Ganti nomor dan pesan sesuai kebutuhan Anda
-        var nomorPenerima = "089620974397";
-        var pesan = "Saya ingin memesan Pulpen Air Glitter Lucu.";
+    // Membentuk tautan WhatsApp dengan nomor dan pesan
+    var waLink =
+      "https://api.whatsapp.com/send?phone=" +
+      nomorPenerima +
+      "&text=" +
+      encodeURIComponent(pesan);
 
-        // Membentuk tautan WhatsApp dengan nomor dan pesan
-        var waLink =
-          "https://api.whatsapp.com/send?phone=" +
-          nomorPenerima +
-          "&text=" +
-          encodeURIComponent(pesan);
+    // Arahkan pengguna ke tautan WhatsApp
+    window.location.href = waLink;
+  }
+</script>
 
-        // Arahkan pengguna ke tautan WhatsApp
-        window.location.href = waLink;
-      }
-    </script>
   </body>
 </html>
