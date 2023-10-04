@@ -189,37 +189,24 @@
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/agency.js"></script>
-<script>
-  function redirectToWhatsApp() {
-    // Ganti nomor penerima sesuai kebutuhan Anda
-    var nomorPenerima = "+6282172716552";
-    
-    // Mengambil semua elemen dengan kelas .dress-name
-    var produkNamaElements = document.querySelectorAll('.dress-name');
-    
-    // Inisialisasi pesan kosong
-    var pesan = "Saya ingin memesan ";
-    
-    // Iterasi melalui elemen-elemen dan tambahkan teks ke pesan
-    produkNamaElements.forEach(function(produkNamaElement, index) {
-      pesan += produkNamaElement.textContent;
-      // Tambahkan koma jika ini bukan elemen terakhir
-      if (index < produkNamaElements.length - 1) {
-        pesan += ", ";
+    <script>
+      function redirectToWhatsApp() {
+        // Ganti nomor dan pesan sesuai kebutuhan Anda
+        var nomorPenerima = "+6282172716552";
+        var pesan = "Halo, Saya ingin membeli Produk EduMall";
+
+        // Membentuk tautan WhatsApp dengan nomor dan pesan
+        var waLink =
+          "https://api.whatsapp.com/send?phone=" +
+          nomorPenerima +
+          "&text=" +
+          encodeURIComponent(pesan);
+
+        // Arahkan pengguna ke tautan WhatsApp
+        window.location.href = waLink;
       }
-    });
+    </script>
 
-    // Membentuk tautan WhatsApp dengan nomor dan pesan
-    var waLink =
-      "https://api.whatsapp.com/send?phone=" +
-      nomorPenerima +
-      "&text=" +
-      encodeURIComponent(pesan);
-
-    // Arahkan pengguna ke tautan WhatsApp
-    window.location.href = waLink;
-  }
-</script>
 
 
   </body>
