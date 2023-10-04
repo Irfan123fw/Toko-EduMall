@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Home - Edu Mall</title>
+    <meta name="description" content="toko online" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    id="page-top"
+    data-bs-spy="scroll"
+    data-bs-target="#mainNav"
+    data-bs-offset="54"
+  >
+    <nav
+      class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#page-top">
+          <img src="assets/img/logo.png" alt="Edu Mall Logo" class="logo" />
+          EduMall
+        </a>
+        <button
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link" href="#page-top">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#produk">Produk</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header
+      class="masthead"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('assets/img/header.jpg');
+      "
+    >
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in"><span>Welcome To Our Shop!</span></div>
+          <div class="intro-heading text-uppercase">
+            <span>Happy Shopping</span>
+          </div>
+          <a
+            class="btn btn-primary btn-xl text-uppercase"
+            role="button"
+            href="#produk"
+            >Produk</a
+          >
+        </div>
+      </div>
+    </header>
+    <section id="produk">
+      <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+          <h2 class="text-uppercase section-heading">PRODUK</h2>
+          <h3 class="text-muted section-subheading"></h3>
+        </div>
+      </div>
+      <div class="container">
+        <div class="barang">
+          <div class="col-md-3">
+            <div class="card">
+              <div class="image-container">
+                <div class="first"></div>
+                <img
+                  src="assets/img/produk.jpg"
+                  class="img-fluid rounded thumbnail-image"
+                />
+              </div>
+
+              <div class="product-detail-container p-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="dress-name">Pulpen Air Glitter Lucu</h5>
+                </div>
+
+                <div
+                  class="d-flex justify-content-between align-items-center pt-1"
+                >
+                  <div>
+                    <span class="new-price">Rp. 5.000</span> <br />
+                    <span class="rating-number">23 pcs</span>
+                  </div>
+
+                  <button
+                    class="btn btn-primary text-uppercase"
+                    onclick="redirectToWhatsApp()"
+                    target="_blank"
+                  >
+                    BUY
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="image-container">
+                <div class="first"></div>
+                <img
+                  src="assets/img/produk2.jpg"
+                  class="img-fluid rounded thumbnail-image"
+                />
+              </div>
+
+              <div class="product-detail-container p-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="dress-name">Pulpen Air Glitter Lucu</h5>
+                </div>
+
+                <div
+                  class="d-flex justify-content-between align-items-center pt-1"
+                >
+                  <div>
+                    <span class="new-price">Rp. 5.000</span> <br />
+                    <span class="rating-number">23 pcs</span>
+                  </div>
+
+                  <button
+                    class="btn btn-primary text-uppercase"
+                    onclick="redirectToWhatsApp()"
+                    target="_blank"
+                  >
+                    BUY
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright&nbsp;© Edu Mall 2023</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/agency.js"></script>
+
+    <script>
+      function redirectToWhatsApp() {
+        // Ganti nomor dan pesan sesuai kebutuhan Anda
+        var nomorPenerima = "089620974397";
+        var pesan = "Saya ingin memesan Pulpen Air Glitter Lucu.";
+
+        // Membentuk tautan WhatsApp dengan nomor dan pesan
+        var waLink =
+          "https://api.whatsapp.com/send?phone=" +
+          nomorPenerima +
+          "&text=" +
+          encodeURIComponent(pesan);
+
+        // Arahkan pengguna ke tautan WhatsApp
+        window.location.href = waLink;
+      }
+    </script>
+  </body>
+</html>
