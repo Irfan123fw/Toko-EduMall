@@ -194,11 +194,20 @@
     // Ganti nomor penerima sesuai kebutuhan Anda
     var nomorPenerima = "+6282172716552";
     
-    // Mengambil teks dari elemen dengan kelas .dress-name
-    var produkNama = document.querySelector('.dress-name').textContent;
+    // Mengambil semua elemen dengan kelas .dress-name
+    var produkNamaElements = document.querySelectorAll('.dress-name');
     
-    // Menggunakan teks produkNama dalam pesan
-    var pesan = "Saya ingin memesan " + produkNama;
+    // Inisialisasi pesan kosong
+    var pesan = "Saya ingin memesan ";
+    
+    // Iterasi melalui elemen-elemen dan tambahkan teks ke pesan
+    produkNamaElements.forEach(function(produkNamaElement, index) {
+      pesan += produkNamaElement.textContent;
+      // Tambahkan koma jika ini bukan elemen terakhir
+      if (index < produkNamaElements.length - 1) {
+        pesan += ", ";
+      }
+    });
 
     // Membentuk tautan WhatsApp dengan nomor dan pesan
     var waLink =
@@ -211,6 +220,7 @@
     window.location.href = waLink;
   }
 </script>
+
 
   </body>
 </html>
