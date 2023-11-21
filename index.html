@@ -98,7 +98,7 @@
             <select id="sort-by" class="form-select">
               <option value="all">All</option>
               <option value="pena">Pena</option>
-              <option value="buku">Buku</option>
+              <option value="stabilo">Stabilo</option>
               <!-- Add more options for other types if needed -->
             </select>
           </div>
@@ -118,8 +118,7 @@
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a
-                  href="https://www.instagram.com/edumall_olshop/"
+                <a href="https://www.instagram.com/edumall_olshop/"
                   ><i class="fa fa-instagram"></i
                 ></a>
               </li>
@@ -133,86 +132,169 @@
     <script src="assets/js/agency.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(document).ready(function () {
-        $("#sort-by").on("change", function () {
-          var selectedType = $(this).val();
+      function redirectToWhatsApp() {
+        // Ganti nomor dan pesan sesuai kebutuhan Anda
+        var nomorPenerima = "+6282172716552";
+        var pesan = "Halo, Saya ingin membeli Produk EduMall";
 
-          $("#product-list .card").each(function () {
-            var productType = $(this).data("type");
+        // Membentuk tautan WhatsApp dengan nomor dan pesan
+        var waLink =
+          "https://api.whatsapp.com/send?phone=" +
+          nomorPenerima +
+          "&text=" +
+          encodeURIComponent(pesan);
 
-            if (selectedType === "all" || selectedType === productType) {
-              $(this).show();
-            } else {
-              $(this).hide();
-            }
-          });
-        });
-      });
-
+        // Arahkan pengguna ke tautan WhatsApp
+        window.location.href = waLink;
+      }
       // Sample product data
       var products = [
         {
           type: "pena",
-          name: "Pena Glitter Bunny Pink Daisy",
-          price: "Rp. 3.000",
+          name: "Pena Glitter  Pink Daisy",
+          price: "Rp. 4.000",
           image: "assets/img/1.png",
           stock: "3 pcs",
         },
         {
           type: "pena",
-          name: "Pena Glitter Bunny Ungu Daisy",
-          price: "Rp. 3.000",
+          name: "Pena Glitter Ungu Daisy",
+          price: "Rp. 4.000",
           image: "assets/img/2.png",
           stock: "3 pcs",
         },
         {
           type: "pena",
-          name: "Pena Glitter Bunny Ungu Daisy",
-          price: "Rp.3.000",
+          name: "Pena Glitter Bunny Kuning Daisy",
+          price: "Rp.4.000",
           image: "assets/img/3.png",
           stock: "3 pcs",
+        },
+        {
+          type: "pena",
+          name: "Pena Glitter Hapy Bunny",
+          price: "Rp.4.000",
+          image: "assets/img/10.png",
+          stock: "3 pcs",
+        },
+        {
+          type: "pena",
+          name: "Pena Glitter Kupu Putih",
+          price: "Rp.4.000",
+          image: "assets/img/4.png",
+          stock: "3 pcs",
+        },
+        {
+          type: "pena",
+          name: "Pena Glitter Kupu Biru",
+          price: "Rp.4.000",
+          image: "assets/img/5.png",
+          stock: "3 pcs",
+        },
+        {
+          type: "pena",
+          name: "Pena Glitter Kupu pink",
+          price: "Rp.4.000",
+          image: "assets/img/6.png",
+          stock: "3 pcs",
+        },
+        {
+          type: "stabilo",
+          name: "Highlighter Stabilo Pastel 6 Warna",
+          price: "Rp.15.000",
+          image: "assets/img/7.png",
+          stock: "2 pcs",
+        },
+        {
+          type: "pena",
+          name: "1 set 6 pcs Pena Aesthetic Biru ",
+          price: "Rp.12.000",
+          image: "assets/img/8.png",
+          stock: "2 pcs",
+        },
+        {
+          type: "pena",
+          name: "1 set 6 pcs Pena Aesthetic Pink ",
+          price: "Rp.12.000",
+          image: "assets/img/9.png",
+          stock: "2 pcs",
+        },
+        {
+          type: "pena",
+          name: "6 Pulpen Gel Kartun Space ",
+          price: "Rp.12.000",
+          image: "assets/img/11.png",
+          stock: "2 pcs",
+        },
+        {
+          type: "pena",
+          name: "6 Pulpen Gel Kartun Bear n Duck",
+          price: "Rp.12.000",
+          image: "assets/img/12.png",
+          stock: "2 pcs",
+        },
+        {
+          type: "pena",
+          name: "6 Pulpen Gel Little Girl",
+          image: "assets/img/13.png",
+          stock: "2 pcs",
         },
         // Add more product data here
       ];
 
-      // Render products based on the data
-      var productContainer = $("#product-list");
-      products.forEach(function (product) {
-        var productCard = $(
-          '<div class="col-md-6 col-lg-3 mb-4">' +
-            '<div class="card" data-type="' +
-            product.type +
-            '">' +
-            '<div class="image-container">' +
-            '<div class="first"></div>' +
-            '<img src="' +
-            product.image +
-            '" class="img-fluid rounded thumbnail-image" />' +
-            "</div>" +
-            '<div class="product-detail-container p-2">' +
-            '<div class="d-flex justify-content-between align-items-center">' +
-            '<h5 class="dress-name">' +
-            product.name +
-            "</h5>" +
-            "</div>" +
-            '<div class="d-flex justify-content-between align-items-center pt-1">' +
-            "<div>" +
-            '<span class="new-price">' +
-            product.price +
-            "</span>" +
-            "<br />" +
-            '<span class="rating-number" >' +
-            product.stock +
-            "</span>" +
-            "</div>" +
-            '<button class="btn btn-primary text-uppercase" ' +
-            'onclick="redirectToWhatsApp()" target="_blank">BUY</button>' +
-            "</div>" +
-            "</div>" +
-            "</div>" +
-            "</div>"
-        );
-        productContainer.append(productCard);
+      function filterProducts(selectedType) {
+        // Kosongkan daftar produk terlebih dahulu
+        $("#product-list").empty();
+
+        // Render ulang produk berdasarkan jenis yang dipilih
+        products.forEach(function (product) {
+          if (selectedType === "all" || selectedType === product.type) {
+            var productCard = $(
+              '<div class="col-md-6 col-lg-3 mb-4">' +
+                '<div class="card mx-auto" data-type="' +
+                product.type +
+                '">' +
+                '<div class="image-container">' +
+                '<div class="first"></div>' +
+                '<img src="' +
+                product.image +
+                '" class="img-fluid rounded thumbnail-image" />' +
+                "</div>" +
+                '<div class="product-detail-container p-2">' +
+                '<div class="d-flex justify-content-between align-items-center">' +
+                '<h5 class="dress-name">' +
+                product.name +
+                "</h5>" +
+                "</div>" +
+                '<div class="d-flex justify-content-between align-items-center pt-1">' +
+                "<div>" +
+                '<span class="new-price">' +
+                product.price +
+                '</span><br /><span class="rating-number">' +
+                product.stock +
+                "</span>" +
+                "</div>" +
+                '<button class="btn btn-primary text-uppercase" ' +
+                'onclick="redirectToWhatsApp()" target="_blank">BUY</button>' +
+                "</div>" +
+                "</div>" +
+                "</div>" +
+                "</div>"
+            );
+
+            $("#product-list").append(productCard);
+          }
+        });
+      }
+
+      $(document).ready(function () {
+        $("#sort-by").on("change", function () {
+          var selectedType = $(this).val();
+          filterProducts(selectedType);
+        });
+
+        // Inisialisasi dengan semua produk yang ditampilkan
+        filterProducts("all");
       });
     </script>
   </body>
